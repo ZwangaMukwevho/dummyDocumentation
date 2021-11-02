@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sheets module &mdash; lab system 0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="db module" href="db.html" />
+    <link rel="prev" title="admin module" href="admin.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> lab system
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="driver.html">driver module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">admin module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sheets module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="db.html">db module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfid.html">rfid module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temp.html">temp module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lab system</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>sheets module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sheets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-sheets">
+<span id="sheets-module"></span><h1>sheets module<a class="headerlink" href="#module-sheets" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sheets.sheets">
+<em class="property">class </em><code class="descclassname">sheets.</code><code class="descname">sheets</code><a class="headerlink" href="#sheets.sheets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sheets.sheets.AddCourse">
+<code class="descname">AddCourse</code><span class="sig-paren">(</span><em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.AddCourse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the course specified to the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.checkCourseExistance">
+<code class="descname">checkCourseExistance</code><span class="sig-paren">(</span><em>course</em>, <em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.checkCourseExistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the course provided by the parameter above exists in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>course</strong> (<em>String</em>) – Code of course to be checked</li>
+<li><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">returns true of the course exists in the db and false if the course does not exist in the database</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.checkLabScheduleExistance">
+<code class="descname">checkLabScheduleExistance</code><span class="sig-paren">(</span><em>schedule_id</em>, <em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.checkLabScheduleExistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the a specific schedule already exists in the database, returns True if exists and false if does not exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>schedule_id</strong> (<em>String</em>) – The schedule id that is being checked in the database</li>
+<li><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Returns true if activity with schedule_id exists in database, and False if it does not exist</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.createEnrollsID">
+<code class="descname">createEnrollsID</code><span class="sig-paren">(</span><em>student_id</em>, <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.createEnrollsID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the enrolls ID that is required when a student is enrolled in a course</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>student_id</strong> (<em>String</em>) – Student number of the student being enrolled</li>
+<li><strong>code</strong> (<em>String</em>) – The course code of the that student is enrolling in</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The enrolls ID of the student</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.createScheduleID">
+<code class="descname">createScheduleID</code><span class="sig-paren">(</span><em>code</em>, <em>start</em>, <em>time</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.createScheduleID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a schedule ID give the course code, start time and end time of the schedule</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>code</strong> (<em>String</em>) – Course code in which the schedule is being generated for</li>
+<li><strong>start</strong> (<em>DateTime</em>) – Start date of the scheduled activity</li>
+<li><strong>time</strong> (<em>DateTime</em>) – Start time for the scheduled activity</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Returns the schedule ID of the activity</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.gatherInsertQueries">
+<code class="descname">gatherInsertQueries</code><span class="sig-paren">(</span><em>query</em>, <em>newValues=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.gatherInsertQueries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combine multiple insert queries into one query,
+In order to allow one call to the db instead of multiple calls</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>query</strong> (<em>String</em>) – The first values to be inserted in the table, (Leading statements of the insert statements)</li>
+<li><strong>newValues</strong> (<em>String</em><em>, </em><em>optional</em>) – The additional values that have to the leading statement of the query, defaults to None</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The new query that has old values and the new values</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.generateRegister">
+<code class="descname">generateRegister</code><span class="sig-paren">(</span><em>schedule_list</em>, <em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.generateRegister" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate the register of an activity that is scheduled and added to the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>schedule_list</strong> (<em>list</em>) – The list of scheduled activities that needs registers to be generated</li>
+<li><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.generateRegisterId">
+<code class="descname">generateRegisterId</code><span class="sig-paren">(</span><em>student_no</em>, <em>schedule_id</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.generateRegisterId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates register ID given a student number and schedule ID for an activity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>student_no</strong> (<em>String</em>) – Student number of student whose is being added to the register</li>
+<li><strong>schedule_id</strong> (<em>String</em>) – The scheduled activity in which the register ID is being generated for</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Returns the generated register ID</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.showCourses">
+<code class="descname">showCourses</code><span class="sig-paren">(</span><em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.showCourses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints all the courses that are available in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.showLabSchedule">
+<code class="descname">showLabSchedule</code><span class="sig-paren">(</span><em>course</em>, <em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.showLabSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows the lab schedules that are scheduled in the database for a specific course</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>course</strong> (<em>String</em>) – The course code in which schedules need to be displayed</li>
+<li><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.showRegister">
+<code class="descname">showRegister</code><span class="sig-paren">(</span><em>schedule_id</em>, <em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.showRegister" title="Permalink to this definition">¶</a></dt>
+<dd><p>prints out the register information for a specific course schedule</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>schedule_id</strong> (<em>String</em>) – The schedule id of the register that must be printed out</li>
+<li><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sheets.sheets.updateLabSchedule">
+<code class="descname">updateLabSchedule</code><span class="sig-paren">(</span><em>dbObj</em><span class="sig-paren">)</span><a class="headerlink" href="#sheets.sheets.updateLabSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the lab scheduled in the database based on entries on the google sheets document</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dbObj</strong> (<em>db</em>) – Database object from db class with functions for accessing remote database</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="admin.html" class="btn btn-neutral float-left" title="admin module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="db.html" class="btn btn-neutral float-right" title="db module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Zwanga Mukwevho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

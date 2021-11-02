@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>db module &mdash; lab system 0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="rfid module" href="rfid.html" />
+    <link rel="prev" title="sheets module" href="sheets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> lab system
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="driver.html">driver module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">admin module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sheets.html">sheets module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">db module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rfid.html">rfid module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="temp.html">temp module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">lab system</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>db module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/db.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="module-db">
+<span id="db-module"></span><h1>db module<a class="headerlink" href="#module-db" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="db.database">
+<em class="property">class </em><code class="descclassname">db.</code><code class="descname">database</code><span class="sig-paren">(</span><em>hostVar</em>, <em>userVar</em>, <em>passwdVar</em>, <em>databaseVar</em>, <em>portVar</em>, <em>auth_pluginVar</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="db.database.cursor">
+<code class="descname">cursor</code><em class="property"> = None</em><a class="headerlink" href="#db.database.cursor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db.database.db">
+<code class="descname">db</code><em class="property"> = None</em><a class="headerlink" href="#db.database.db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="db.database.findStudentNumber">
+<code class="descname">findStudentNumber</code><span class="sig-paren">(</span><em>studentNumber</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database.findStudentNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns results Select statement that looks for a student number in the student table</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>studentNumber</strong> (<em>String</em>) – MKWZWA0003</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of records obtained from the query</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.database.getCurrentActivity">
+<code class="descname">getCurrentActivity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.database.getCurrentActivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the activity that is currently scheduled for the specific lab</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The response from the database containing information about scheduled activity</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.database.getDB">
+<code class="descname">getDB</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.database.getDB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="db.database.insertData">
+<code class="descname">insertData</code><span class="sig-paren">(</span><em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database.insertData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts data to the enrolls the database using the given qeury</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>query</strong> (<em>String</em>) – query to be executed on the database</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.database.markAttendance">
+<code class="descname">markAttendance</code><span class="sig-paren">(</span><em>student_no</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database.markAttendance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes status bit from 0 to 1 in the register schema for student with student number student_no</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>student_no</strong> (<em>String</em>) – Student number of student</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.database.markRegister">
+<code class="descname">markRegister</code><span class="sig-paren">(</span><em>studentNumber</em>, <em>activity</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database.markRegister" title="Permalink to this definition">¶</a></dt>
+<dd><p>[summary]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>studentNumber</strong> (<em>[</em><em>type</em><em>]</em>) – [description]</li>
+<li><strong>activity</strong> (<em>[</em><em>type</em><em>]</em>) – [description]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="db.database.postTempReading">
+<code class="descname">postTempReading</code><span class="sig-paren">(</span><em>student_no</em>, <em>tempValaue</em><span class="sig-paren">)</span><a class="headerlink" href="#db.database.postTempReading" title="Permalink to this definition">¶</a></dt>
+<dd><p>Records the temperature reading from the student in the database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>student_no</strong> (<em>String</em>) – Student number of student</li>
+<li><strong>tempValaue</strong> (<em>String</em>) – The temperature reading from student</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sheets.html" class="btn btn-neutral float-left" title="sheets module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rfid.html" class="btn btn-neutral float-right" title="rfid module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Zwanga Mukwevho.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
